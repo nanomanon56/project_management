@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171221165640) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "complered_at"
+    t.datetime "completed_at"
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 

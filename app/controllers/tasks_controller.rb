@@ -8,13 +8,14 @@ class TasksController < ApplicationController
   end
 
   def destroy
-     if @tasks.destroy
-       flash[:success] = "Task was deleted."
-    else
-      flash[:error]="Task was not deleted"
-    end
-    redirect_to @project
-  end
+		if @task.destroy
+			flash[:success] = "Task was deleted."
+		else
+			flash[:error] = "Task was not deleted."
+		end
+		redirect_to @project
+	end
+
 
   def complete
 		@task.update_attribute(:completed_at, Time.now)
